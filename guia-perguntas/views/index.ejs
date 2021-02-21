@@ -13,6 +13,11 @@
   <hr>
   <h3>Lista de perguntas</h3>
   <%=nome%>, programador <%=lang%>.
+
+      <% if(error) { %>
+        <h3>Ops... Não conseguimos prosseguir com a sua solicitação!</h3>
+
+        <%}%>
 </body>
 
 </html>

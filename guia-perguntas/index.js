@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   var nome = "Vyctor Guimarães";
   var lang = "JavaScript";
 
-  res.render("index", { nome, lang });
+  res.render("index", { nome, lang, error: false });
 });
 
 app.listen(8080, () => {
