@@ -12,3 +12,4 @@
     - É um framework popularmente utilizado para construção de aplicações back-end.
   - Rotas
     - É o caminho que a requisição percorre para chegar a determinado endpoint, função, da aplicação.
+- MySQL
