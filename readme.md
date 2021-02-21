@@ -13,3 +13,6 @@
   - Rotas
     - É o caminho que a requisição percorre para chegar a determinado endpoint, função, da aplicação.
 - MySQL
+  - Sistema de gerenciamento de banco de dados que utiliza a linguagens SQL, Structured Query Language, como interface.
+- Projeto 1: Guia Perguntas
+  - Projeto de uma plataforma de perguntas e respostas ao estilo Yahoo Respostas.
