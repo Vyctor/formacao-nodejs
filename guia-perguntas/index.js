@@ -5,10 +5,17 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  var nome = "Vyctor Guimarães";
-  var lang = "JavaScript";
+  const nome = "Vyctor Guimarães";
+  const lang = "JavaScript";
+  const error = false;
 
-  res.render("index", { nome, lang, error: false });
+  const produtos = [
+    { nome: "Doritos", preco: 3.14 },
+    { nome: "Coca Cola", preco: 5.9 },
+    { nome: "Leite", preco: 3.15 },
+  ];
+
+  res.render("index", { nome, lang, error, produtos });
 });
 
 app.listen(8080, () => {

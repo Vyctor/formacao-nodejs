@@ -18,6 +18,15 @@
         <h3>Ops... Não conseguimos prosseguir com a sua solicitação!</h3>
 
         <%}%>
+          <br>
+
+          <hr>
+
+          <% produtos.forEach((produto)=> { %>
+            <%= produto.nome %> <br>
+              <%= produto.preco %> <br>
+                <hr>
+                <% }) %>
 </body>
 
 </html>
