@@ -11,7 +11,18 @@
 </head>
 
 <body>
-  <h1>Estilo do Bootstrap</h1>
+  <div class="container">
+    <h3>Realizar pergunta</h3>
+    <hr>
+    <form>
+      <label for="titulo">Título</label>
+      <input type="text" name="titulo" id="titulo" placeholder="Título" class="form-control">
+      <label for="pergunta">Descrição</label>
+      <textarea name="pergunta" id="pergunta" cols="30" rows="10" class="form-control"></textarea>
+      <button class="btn btn-primary mt-2">Perguntar</button>
+    </form>
+
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
     integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
