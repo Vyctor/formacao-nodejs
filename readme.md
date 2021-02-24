@@ -1,5 +1,14 @@
 # Arquivos do curso Formação Nodejs
 
+```docker
+  // Baixa imagem do mysql
+  docker pull mysql
+  // Cria um container com a imagem
+  docker run --name mysql -e MYSQL_ROOT_PASSWORD=admin -p 3306:3306 -d mysql
+  // Executa o bash no container
+  docker exec -it mysql bash
+```
+
 ## Assuntos cobertos pelo curso
 
 - Módulos
