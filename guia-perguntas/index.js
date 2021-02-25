@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const connection = require("./database/database");
 
 // Database
+const perguntaModel = require("./database/Pergunta");
+
 connection
   .authenticate()
   .then(() => {
