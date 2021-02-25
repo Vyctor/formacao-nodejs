@@ -27,9 +27,9 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   const perguntas = Pergunta.findAll({
     raw: true,
-  }).then((perguntas) => perguntas);
-
-  res.render("index", perguntas);
+  }).then((perguntas) => {
+    res.render("index", { perguntas });
+  });
 });
 
 app.get("/perguntar", (req, res) => {
