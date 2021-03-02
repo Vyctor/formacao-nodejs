@@ -5,6 +5,7 @@ const connection = require("./database/database");
 
 // Database
 const Pergunta = require("./database/Pergunta");
+const Resposta = require("./database/Resposta");
 
 connection
   .authenticate()
