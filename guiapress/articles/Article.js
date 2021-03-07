@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const connection = require("../database/database");
+const Category = require("../categories/Category");
 
 const Article = connection.define("articles", {
     title: {
@@ -11,9 +12,12 @@ const Article = connection.define("articles", {
         allowNull: false,
     },
     body: {
-        type: Sequelize.Text,
+        type: Sequelize.TEXT,
         allowNull: false,
     },
 });
+
+Category.hasMany(Article); // 1 - N
+Article.belongsTo(Category);
 
 module.exports = Article;
