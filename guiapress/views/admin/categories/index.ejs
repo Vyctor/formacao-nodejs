@@ -3,12 +3,16 @@
 
         <div class="container">
             <hr>
-            <h2>Categorias</h2>
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Categorias</h2>
+                <a href="/admin/categories/new" class="btn btn-success">Criar nova Categoria</a>
+            </div>
+
             <hr>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td>ID</td>
+                        <td></td>ID</td>
                         <td>Título</td>
                         <td>Slug</td>
                         <td>Ações</td>
@@ -27,6 +31,8 @@
                                 <%= category.slug %>
                             </th>
                             <th>
+                                <button class="btn btn-warning ">Editar</button>
+                                <button class="btn btn-danger ">Deletar</button>
                             </th>
                         </tr>
                         <% }) %>
