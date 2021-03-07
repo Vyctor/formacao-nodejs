@@ -30,9 +30,16 @@
                             <th>
                                 <%= category.slug %>
                             </th>
-                            <th>
-                                <button class="btn btn-warning ">Editar</button>
-                                <button class="btn btn-danger ">Deletar</button>
+                            <th class="d-flex justify-content-around">
+                                <form method="POST" class="p-2">
+                                    <input type="hidden" name="id" value="<%=category.id %>">
+                                    <button class="btn btn-warning ">Editar</button>
+                                </form>
+
+                                <form method="POST" class="p-2" action="/admin/categories/delete">
+                                    <input type="hidden" name="id" value="<%=category.id %>">
+                                    <button class="btn btn-danger ">Deletar</button>
+                                </form>
                             </th>
                         </tr>
                         <% }) %>
