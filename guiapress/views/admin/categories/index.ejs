@@ -36,7 +36,7 @@
                                     <button class="btn btn-warning ">Editar</button>
                                 </form>
 
-                                <form method="POST" class="p-2" action="/admin/categories/delete">
+                                <form method="POST" class="p-2" action="/admin/categories/delete" onsubmit="confirmarExclusao(event, this)">
                                     <input type="hidden" name="id" value="<%=category.id %>">
                                     <button class="btn btn-danger ">Deletar</button>
                                 </form>
@@ -49,3 +49,16 @@
         </div>
 
         <%- include('../../partials/footer.ejs') %>
+
+            <script>
+                function confirmarExclusao(event, form) {
+
+                    event.preventDefault();
+                    console.log("O form não foi enviado!");
+
+                    const decision = confirm("Deseja realmente deletar esta categoria?");
+                    if (decision) {
+                        form.submit();
+                    }
+                }
+            </script>
