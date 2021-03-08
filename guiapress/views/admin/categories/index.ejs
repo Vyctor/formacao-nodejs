@@ -30,11 +30,8 @@
                             <th>
                                 <%= category.slug %>
                             </th>
-                            <th class="d-flex justify-content-around">
-                                <form method="POST" class="p-2">
-                                    <input type="hidden" name="id" value="<%=category.id %>">
-                                    <button class="btn btn-warning ">Editar</button>
-                                </form>
+                            <th class="d-flex justify-content-around align-items-center">
+                                <a href="/admin/categories/edit/<%=category.id%>" class="btn btn-warning">Editar</a>
 
                                 <form method="POST" class="p-2" action="/admin/categories/delete" onsubmit="confirmarExclusao(event, this)">
                                     <input type="hidden" name="id" value="<%=category.id %>">
@@ -52,10 +49,7 @@
 
             <script>
                 function confirmarExclusao(event, form) {
-
                     event.preventDefault();
-                    console.log("O form não foi enviado!");
-
                     const decision = confirm("Deseja realmente deletar esta categoria?");
                     if (decision) {
                         form.submit();
